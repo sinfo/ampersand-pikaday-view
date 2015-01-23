@@ -1,10 +1,10 @@
-# ampersand-date-view    ![Build Status](https://api.travis-ci.org/mikehedman/ampersand-date-view.svg?branch=master)
+# ampersand-pikaday-view
 
-An extension of [ampersand-input-view](https://github.com/AmpersandJS/ampersand-input-view) to create a three part date control.
+An Ampersand view module for user date input, using [pikaday.js](https://github.com/dbushell/Pikaday/) and based on [ampersand-date-view](https://github.com/mikehedman/ampersand-date-view).
 
 ## install
 ```
-npm install ampersand-date-view
+npm install ampersand-pikaday-view
 ```
 
 ## example
@@ -20,7 +20,6 @@ module.exports = FormView.extend({
               label: 'Birth date',
               value: this.model.birthDate || '',
               name: 'birthDate',
-              yearMax: 2000
             }),
             ...
         ];
@@ -31,18 +30,16 @@ module.exports = FormView.extend({
 
 #### opts
 
-- yearMin   (defaults to 1900)
-- yearMax   (defaults to 2100)
+- minDate
+- maxDate
 
 And all the standard options from ampersand-input-view
 
-## changelog
-0.0.7 - removing hardcoded limitation on year
-0.0.8 - Changes provided by @xicombd from @sinfo: added yearMin, yearMax constraints, demo, and lint cleanup 
 
 ## credits
 
-Thanks to the Ampersand group!
+Thanks to [@mikehedman](https://github.com/mikehedman) for `ampersand-date-view` and [@dbushell](https://github.com/dbushell) for `pikaday.js`.
+
 
 ## license
 
