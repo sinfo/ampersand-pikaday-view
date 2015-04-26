@@ -1,5 +1,5 @@
 var View = require('ampersand-view');
-var Pikaday = require('pikaday');
+var Pikaday = require('pikaday-time');
 var isDate = require('amp-is-date');
 
 module.exports = View.extend({
@@ -78,6 +78,9 @@ module.exports = View.extend({
             setDefaultDate: true,
             minDate: self.minDate,
             maxDate: self.maxDate,
+						showTime: self.showTime,
+						showSeconds: self.showSeconds,
+						use24hour: self.use24hour
         });
 
         this.handleInputChanged = this.handleInputChanged.bind(this);
@@ -95,7 +98,10 @@ module.exports = View.extend({
         validClass: ['string', true, 'input-valid'],
         invalidClass: ['string', true, 'input-invalid'],
         rootElementClass: ['string', true, ''],
-        date: 'date'
+        date: 'date',
+				showTime: ['boolean', false, false],
+				showSeconds: ['boolean', false, false],
+				use24hour: ['boolean', false, false]
     },
 
     derived: {

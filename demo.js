@@ -10,6 +10,7 @@ var input = new DateView({
     required: true,
     value: new Date('Mon Jan 1 1994 00:00:00 GMT+0100 (GMT)'),
     maxDate: new Date('Mon Jan 1 2000 00:00:00 GMT+0100 (GMT)'),
+		showTime: true
 });
 
 var form = document.createElement('form');
